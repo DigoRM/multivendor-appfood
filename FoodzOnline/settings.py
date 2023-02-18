@@ -156,3 +156,12 @@ MESSAGE_TAGS = {
     messages.INFO: '',
     50: 'critical',
 }
+
+# Email COnfiguration
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'rmarcolino.consultoria@gmail.com'
+EMAIL_HOST_PASSWORD = 'gpyfkxwxkeonxfmd'
+DEFAULT_FROM_EMAIL = "OnlineFoodz <no-reply>"
