@@ -1,13 +1,14 @@
-from django.urls import path
+from django.urls import path, include
 from . import views
 
 urlpatterns = [
+    path('', views.myAccount),
     path('register/', views.register, name='register'),
     path('registerVendor/', views.registerVendor, name='registerVendor'),
     path('login/', views.login, name='login'),  
     path('logout/', views.logout, name='logout'),
     path('custDashboard/', views.custDashboard, name='custDashboard'),
-    path('vendorDashboard/', views.custDashboard, name='vendorDashboard'),
+    path('vendorDashboard/', views.vendorDashboard, name='vendorDashboard'),
     path('myAccount/', views.myAccount, name='myAccount'),
     
     path('activate/<uidb64>/<token>/', views.activate, name='activate'),
@@ -16,5 +17,5 @@ urlpatterns = [
     path('reset_password_validate/<uidb64>/<token>/', views.reset_password_validate, name='reset_password_validate'),
     path('reset_password/', views.reset_password, name='reset_password'),
     
-    
+    path('vendor/', include('vendor.urls')),  
 ]

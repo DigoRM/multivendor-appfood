@@ -1,0 +1,13 @@
+{% autoescape off %}
+
+Hi {{user.first_name}},
+
+{% if is_approved %}
+Congratulations! Your restaurant has been approved to be partner of OnlineFood.
+
+{% else %}
+We are sorry! Your restaurant is not eligible to enter on OnlineFood marketplace. For more detais, please contact support@foodonline.com
+
+{% endif %}
+
+{% endautoescape %}
