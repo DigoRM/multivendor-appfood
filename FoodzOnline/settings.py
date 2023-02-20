@@ -66,6 +66,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'accounts.context_processors.get_vendor',
+                'accounts.context_processors.get_google_api',
             ],
         },
     },
@@ -166,3 +167,5 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'rmarcolino.consultoria@gmail.com'
 EMAIL_HOST_PASSWORD = 'gpyfkxwxkeonxfmd'
 DEFAULT_FROM_EMAIL = "OnlineFoodz <no-reply>"
+
+GOOGLE_API_KEY = 'AIzaSyC2-DtIjpKro26rZICBeoNgM0gXCYf1Aso'
