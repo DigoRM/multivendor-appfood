@@ -28,7 +28,7 @@ class FoodItem(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     food_title = models.CharField(max_length=55, blank=True)
     slug = models.SlugField(max_length=55, unique=True)
-    description = models.CharField(max_length=255, blank=True)
+    description = models.TextField(max_length=255, blank=True)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     image = models.ImageField(upload_to='foodImages')
     is_available = models.BooleanField(default=True)
